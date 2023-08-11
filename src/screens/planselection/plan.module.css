@@ -1,0 +1,81 @@
+/* The objective of using different CSS methodology here is to demonstrate css knowledege of diffrent methodologies */
+.plan_container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.toggle_container {
+  background: #1d58af;
+  width: 156px;
+  overflow: hidden;
+  border-radius: 70px;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+.activebutton {
+  background: white;
+  color: #1d58af;
+  font-weight: 600;
+}
+.toggleButton {
+  border-radius: 70px;
+  padding: 7%;
+  font-size: 15px;
+}
+.inactivebutton {
+  color: white;
+  background: #1d58af;
+  font-weight: 500;
+}
+.select_option {
+  background-color: #1d58afa6;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  color: white;
+  position: relative;
+  height: 95px;
+  width: 95px;
+  place-content: center;
+  text-transform: capitalize;
+}
+.select_active_option {
+  background-color: #1d58af;
+}
+.select_active_option::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  bottom: -9px;
+  border-top: 15px solid #1d58af;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+}
+.plan_submit_btn {
+  background: #1d58af;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2%;
+  border-radius: 4px;
+  margin-left: 25%;
+  color: white;
+  font-size: 18px;
+  margin-top: 2%;
+}
+.plan_detail_text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #383838;
+}
+.activeText {
+  color: #1d58af;
+  font-weight: 600;
+}
+.devicesText {
+  font-size: 14px;
+}
