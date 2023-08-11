@@ -13,7 +13,7 @@ export default function Register() {
     setValues(updatedValue);
   };
   const handleRegister = async () => {
-    await fetch("http://localhost:3000/signup", {
+    await fetch("https://payment-pccw.onrender.com/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),

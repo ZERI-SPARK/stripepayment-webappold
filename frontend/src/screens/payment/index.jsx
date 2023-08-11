@@ -43,17 +43,22 @@ export default function PaymentScreen() {
       details?.cardyear?.length == 2 &&
       details?.cardcvv?.length == 3
     ) {
-      let res = await fetch("http://localhost:3000/update", {
+      await fetch("https://payment-pccw.onrender.com/update", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(details),
-      });
-      if (res && res.statusText == "OK") {
-        navigate("/planview");
-      }
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data); // This will show the actual response data
+          if (data) {
+            navigate("/planview");
+          } else {
+            notify();
+          }
+        });
     } else {
       notify();
-      return;
     }
   };
   const notify = () => {

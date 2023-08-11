@@ -13,7 +13,7 @@ export default function PlanView() {
     getUserPlan();
   }, []);
   const getUserPlan = async () => {
-    await fetch("http://localhost:3000/getPlan", {
+    await fetch("https://payment-pccw.onrender.com/getPlan", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId: userId }),
